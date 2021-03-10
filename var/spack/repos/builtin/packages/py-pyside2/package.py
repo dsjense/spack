@@ -8,16 +8,15 @@ from spack import *
 
 class PyPyside2(PythonPackage):
     """Python bindings for Qt."""
-
-    homepage = "https://www.pyside.org/"
-    git      = "https://code.qt.io/pyside/pyside-setup.git"
+    homepage = "https://pypi.org/project/PySide2/"
+    git      = "https://code.qt.io/cgit/pyside/pyside-setup.git"
 
     # More recent versions of PySide2 (for Qt5) have been taken under
     # the offical Qt umbrella.  For more information, see:
     # http://wiki.qt.io/Qt_for_Python_Development_Getting_Started
 
     version('develop', tag='dev')
-    version('5.14.2.1', tag='v5.14.2.1', submodules=True)
+    version('5.14.2.1', tag='v5.14.2.1', submodules=True, get_full_repo=True)
     version('5.13.2', tag='v5.13.2', submodules=True)
     version('5.13.1', tag='v5.13.1', submodules=True)
     version('5.13.0', tag='v5.13.0', submodules=True)
